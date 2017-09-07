@@ -15,6 +15,13 @@ configureSSH(){
     fi
 }
 
+installDotNetCoreRemoteDebug(){
+    # https://github.com/OmniSharp/omnisharp-vscode/wiki/Attaching-to-remote-processes
+    curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l ~/vsdbg
+    # will outptu >>> Info: Successfully installed vsdbg at '/home/vagrant/vsdbg'
+}
+
 configureSSH
+installDotNetCoreRemoteDebug
 
 # keep LF

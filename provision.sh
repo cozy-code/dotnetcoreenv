@@ -85,6 +85,10 @@ installDotNetCore20(){
     # Install .NET Core SDK
     apt-get -y update
     apt-get -y install dotnet-sdk-2.0.0
+
+    #install dependency
+    apt-get -y install unzip
+    
 }
 configureSSHD(){
     if [ -e "/vagrant/ssh/sshd_config" ]; then
